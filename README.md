@@ -22,18 +22,24 @@ In this paper, we propose AGA-GAN(Attribute Guided Attention Generative Adversar
 ## 3.) Training and Testing
 ## 3.1)Data Preparation
 1.) make directory named "celebA_128"
-2.) ALign the faces using mtcnn
+
+2.) Align the faces using mtcnn
 
 
 ## 3.2) Training AGA-GAN
 Model architecture is defined in `aagan_8x.py`
-Run the script as:
+
+Train AGA-GAN as:
+
 `python aagan_8x.py`
+
 Test using:
+
 `python agagan_test.py`
 
 ## 3.2)Training AGA-GAN and UNet
 For training and testing the AGA-GAN+Unet run:
+
 `python agagan_unet.py`
 
 ## 4.) Citation
