@@ -7,33 +7,34 @@ In this paper, we propose AGA-GAN(Attribute Guided Attention Generative Adversar
 
 
 
-## 2.2.) The architecture of our Progressive Alternative Attention Dense (PAAD) block
-![](PAA-Net.jpeg)
+## 2.2.) Progressive Attribute Guided Attention Block
+![](agatt.png)
 
-## 2.3.) Overview of the complete PAANet architecture
-![](PAA-Net-Full.jpeg)
+## 2.3.) Architecture of our Attribute Guided Attention Generative Adversarial Network
+![](generator_2.png)
 
-## 2.4.) Qualitative Results
-![](quantitative_PAA.jpeg)
+## 2.4.) Architecture of our dual attention U-Net for refining super-resolved images
+![](unet.png)
+
+## 2.5.) Qualitative results for 8x upsampling
+![](agagan_8x.png)
 
 ## 3.) Training and Testing
 ## 3.1)Data Preparation
-1.) make directory named "data/kins"
+1.) make directory named "celebA_128"
+2.) ALign the faces using mtcnn
 
-2.) make two sub-directories "train" and "test"
 
-3.) Put images under directory named "image"
-
-4.) Put masks under directory named "mask"
-
-## 3.2)Training
-Model architecture is defined in `model_bio.py`
+## 3.2) Training AGA-GAN
+Model architecture is defined in `aagan_8x.py`
 Run the script as:
-`python paanet_train.py`
+`python aagan_8x.py`
+Test using:
+`python agagan_test.py`
 
-## 3.2)Testing
-For testing the trained model run:
-`python paanet_test.py`
+## 3.2)Training AGA-GAN and UNet
+For training and testing the AGA-GAN+Unet run:
+`python agagan_unet.py`
 
 ## 4.) Citation
 Please cite our paper if you find the work useful:
